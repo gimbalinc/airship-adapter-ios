@@ -20,13 +20,33 @@ The Airship Gimbal Adapter is available through CocoaPods. To install it, simply
 #### Swift
 
 ```
-import AirshipGimbalAdapter
+import AirshipAdapter
 ```
 
 #### Obj-C
 
 ```
-@import AirshipGimbalAdapter
+@import AirshipAdapter
+```
+
+### Enabling Event Tracking
+
+#### RegionEvents
+To enable or disable the tracking of Airship `RegionEvent` objects, use the  `shouldTrackRegionEvents` property:
+
+```
+AirshipAdapter.shared.shouldTrackRegionEvents = true // enabled
+AirshipAdapter.shared.shouldTrackRegionEvents = false // disabled
+```
+
+#### CustomEvents
+
+To enable or disable the tracking of Airship `CustomEvent` objects, use the `shouldTrackCustomEntryEvents` and `shouldTrackCustomExitEvents` properties to track events upon place entry and exit, respectively:
+```
+AirshipAdapter.shared.shouldTrackCustomExitEvents = true // CustomEvent tracking enabled for place exits
+AirshipAdapter.shared.shouldTrackCustomExitEvents = false // CustomEvent tracking disabled for place exits
+AirshipAdapter.shared.shouldTrackCustomEntryEvents = true // CustomEvent tracking enabled for place entries
+AirshipAdapter.shared.shouldTrackCustomEntryEvents = false // CustomEvent tracking disabled for place entries
 ```
 
 ### Restoring the adapter
@@ -105,3 +125,9 @@ AirshipGimbalAdapter.shared.bluetoothPoweredOffAlertEnabled = true
 ```
 [AirshpGimbalAdapter shared].bluetoothPoweredOffAlertEnabled = YES;
 ```
+
+## AirshipGimbalAdapter Migration
+
+The `AirshipGimbalAdapter` is an older version of this adapter; if you previously used the `AirshipGimblAdapter` and would like to migrate, see the following steps:
+- If using Cocoapods, change the name of the pod from `AirshipGimbalAdapter` to `GimbalAirshipAdapter`
+- In your code, references to the `AirshipGimbalAdapter` class should be changed to `AirshipAdapter`
