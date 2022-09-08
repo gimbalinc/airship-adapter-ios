@@ -6,12 +6,14 @@ The Airship Gimbal Adapter is a drop-in class that allows users to integrate Gim
 - [Gimbal Developer Guide](https://gimbal.com/doc/iosdocs/v2/devguide.html)
 - [Gimbal Manager Portal](https://manager.gimbal.com)
 - [Airship Getting Started guide](http://docs.airship.com/build/ios.html)
+- [Airship and Gimbal Integration Guide](https://docs.airship.com/partners/gimbal/)
 
 ## Installation
 
 The Airship Gimbal Adapter is available through CocoaPods. To install it, simply add the following line to your Podfile:
-
-`pod "GimbalAirshipAdapter"`
+```
+pod "GimbalAirshipAdapter"
+```
 
 ## Usage
 
@@ -30,8 +32,9 @@ import AirshipAdapter
 ```
 
 ### Enabling Event Tracking
+By default, event tracking is disabled, and thus must be explicitly enabled as described below.
 
-#### RegionEvents
+##### RegionEvents
 To enable or disable the tracking of Airship `RegionEvent` objects, use the  `shouldTrackRegionEvents` property:
 
 ```
@@ -39,14 +42,17 @@ AirshipAdapter.shared.shouldTrackRegionEvents = true // enabled
 AirshipAdapter.shared.shouldTrackRegionEvents = false // disabled
 ```
 
-#### CustomEvents
-
-To enable or disable the tracking of Airship `CustomEvent` objects, use the `shouldTrackCustomEntryEvents` and `shouldTrackCustomExitEvents` properties to track events upon place entry and exit, respectively:
+##### CustomEvents
+To enable or disable the tracking of Airship `CustomEvent` objects, use the `shouldTrackCustomEntryEvents` and `shouldTrackCustomExitEvents` properties to track events upon place entry and exit, as shown below. For more information regarding Airship Custom Events, see the documentation [here](https://docs.airship.com/guides/messaging/user-guide/data/custom-events/#overview).
 ```
-AirshipAdapter.shared.shouldTrackCustomExitEvents = true // CustomEvent tracking enabled for place exits
-AirshipAdapter.shared.shouldTrackCustomExitEvents = false // CustomEvent tracking disabled for place exits
-AirshipAdapter.shared.shouldTrackCustomEntryEvents = true // CustomEvent tracking enabled for place entries
-AirshipAdapter.shared.shouldTrackCustomEntryEvents = false // CustomEvent tracking disabled for place entries
+// To enable CustomEvent tracking for place exits
+AirshipAdapter.shared.shouldTrackCustomExitEvents = true
+// To disable CustomEvent tracking for place exits
+AirshipAdapter.shared.shouldTrackCustomExitEvents = false
+// To enable CustomEvent tracking for place entries
+AirshipAdapter.shared.shouldTrackCustomEntryEvents = true
+// To disable CustomEvent tracking for place entries
+AirshipAdapter.shared.shouldTrackCustomEntryEvents = false
 ```
 
 ### Restoring the adapter
@@ -131,3 +137,4 @@ AirshipGimbalAdapter.shared.bluetoothPoweredOffAlertEnabled = true
 The `AirshipGimbalAdapter` is an older version of this adapter; if you previously used the `AirshipGimblAdapter` and would like to migrate, see the following steps:
 - If using Cocoapods, change the name of the pod from `AirshipGimbalAdapter` to `GimbalAirshipAdapter`
 - In your code, references to the `AirshipGimbalAdapter` class should be changed to `AirshipAdapter`
+- The older `AirshipGimbalAdapter` tracked Region Events but not Custom Events; if you would like to keep this type of functionality, disable `CustomEvent` tracking and enable `RegionEvent` tracking, as described above in the section entitled `Enabling Event Tracking`. 
