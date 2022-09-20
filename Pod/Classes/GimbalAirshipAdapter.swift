@@ -17,7 +17,7 @@ fileprivate let shouldTrackRegionEventsKey = "gmbl_should_track_region_events"
     /**
      * Singleton access.
      */
-    @objc public static let shared = AirshipGimbalAdapter()
+    @objc public static let shared = AirshipAdapter()
 
     #if !targetEnvironment(simulator)
 
