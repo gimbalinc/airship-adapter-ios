@@ -109,7 +109,7 @@ fileprivate let shouldTrackRegionEventsKey = "gmbl_should_track_region_events"
         }
 
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(AirshipGimbalAdapter.updateDeviceAttributes),
+                                               selector: #selector(AirshipAdapter.updateDeviceAttributes),
                                                name: Channel.channelCreatedEvent,
                                                object: nil)
     }
@@ -200,27 +200,27 @@ private class AirshipGimbalDelegate : NSObject, PlaceManagerDelegate {
     func placeManager(_ manager: PlaceManager, didBegin visit: Visit) {
         trackPlaceEventFor(visit, boundaryEvent: .enter)
         
-        AirshipGimbalAdapter.shared.delegate?.placeManager?(manager, didBegin: visit)
+        AirshipAdapter.shared.delegate?.placeManager?(manager, didBegin: visit)
     }
 
     func placeManager(_ manager: PlaceManager, didBegin visit: Visit, withDelay delayTime: TimeInterval) {
         trackPlaceEventFor(visit, boundaryEvent: .enter)
         
-        AirshipGimbalAdapter.shared.delegate?.placeManager?(manager, didBegin: visit, withDelay: delayTime)
+        AirshipAdapter.shared.delegate?.placeManager?(manager, didBegin: visit, withDelay: delayTime)
     }
 
     func placeManager(_ manager: PlaceManager, didEnd visit: Visit) {
         trackPlaceEventFor(visit, boundaryEvent: .exit)
         
-        AirshipGimbalAdapter.shared.delegate?.placeManager?(manager, didEnd: visit)
+        AirshipAdapter.shared.delegate?.placeManager?(manager, didEnd: visit)
     }
 
     func placeManager(_ manager: PlaceManager, didReceive sighting: BeaconSighting, forVisits visits: [Any]) {
-        AirshipGimbalAdapter.shared.delegate?.placeManager?(manager, didReceive: sighting, forVisits: visits)
+        AirshipAdapter.shared.delegate?.placeManager?(manager, didReceive: sighting, forVisits: visits)
     }
 
     func placeManager(_ manager: PlaceManager, didDetect location: CLLocation) {
-        AirshipGimbalAdapter.shared.delegate?.placeManager?(manager, didDetect: location)
+        AirshipAdapter.shared.delegate?.placeManager?(manager, didDetect: location)
     }
     
     private func trackPlaceEventFor(_ visit: Visit, boundaryEvent: UABoundaryEvent) {
