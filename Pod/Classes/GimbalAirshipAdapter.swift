@@ -11,6 +11,7 @@ fileprivate let hideBlueToothAlertViewKey = "gmbl_hide_bt_power_alert_view"
 fileprivate let shouldTrackCustomEntryEventsKey = "gmbl_should_track_custom_entry"
 fileprivate let shouldTrackCustomExitEventsKey = "gmbl_should_track_custom_exit"
 fileprivate let shouldTrackRegionEventsKey = "gmbl_should_track_region_events"
+fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
 
 @objc open class AirshipAdapter : NSObject {
 
@@ -51,10 +52,10 @@ fileprivate let shouldTrackRegionEventsKey = "gmbl_should_track_region_events"
      */
     @objc open var bluetoothPoweredOffAlertEnabled : Bool {
         get {
-            return !UserDefaults.standard.bool(forKey: hideBlueToothAlertViewKey)
+            return defaults.bool(forKey: hideBlueToothAlertViewKey)
         }
         set {
-            UserDefaults.standard.set(!newValue, forKey: hideBlueToothAlertViewKey)
+            defaults.set(!newValue, forKey: hideBlueToothAlertViewKey)
         }
     }
     
@@ -63,10 +64,10 @@ fileprivate let shouldTrackRegionEventsKey = "gmbl_should_track_region_events"
      */
     @objc open var shouldTrackCustomEntryEvents : Bool {
         get {
-            return UserDefaults.standard.bool(forKey: shouldTrackCustomEntryEventsKey)
+            return defaults.bool(forKey: shouldTrackCustomEntryEventsKey)
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: shouldTrackCustomEntryEventsKey)
+            defaults.set(newValue, forKey: shouldTrackCustomEntryEventsKey)
         }
     }
     
@@ -75,10 +76,10 @@ fileprivate let shouldTrackRegionEventsKey = "gmbl_should_track_region_events"
      */
     @objc open var shouldTrackCustomExitEvents : Bool {
         get {
-            return UserDefaults.standard.bool(forKey: shouldTrackCustomExitEventsKey)
+            return defaults.bool(forKey: shouldTrackCustomExitEventsKey)
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: shouldTrackCustomExitEventsKey)
+            defaults.set(newValue, forKey: shouldTrackCustomExitEventsKey)
         }
     }
     
@@ -87,25 +88,28 @@ fileprivate let shouldTrackRegionEventsKey = "gmbl_should_track_region_events"
      */
     @objc open var shouldTrackRegionEvents : Bool {
         get {
-            return UserDefaults.standard.bool(forKey: shouldTrackRegionEventsKey)
+            return defaults.bool(forKey: shouldTrackRegionEventsKey)
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: shouldTrackRegionEventsKey)
+            defaults.set(newValue, forKey: shouldTrackRegionEventsKey)
         }
     }
+    
+    @objc private let defaults: UserDefaults
     
     #if !targetEnvironment(simulator)
     private override init() {
         placeManager = PlaceManager()
-        gimbalDelegate = AirshipGimbalDelegate()
+        defaults = UserDefaults(suiteName: defaultsSuiteName) ?? UserDefaults.standard
+        gimbalDelegate = AirshipGimbalDelegate(withDefaults: defaults)
         deviceAttributesManager = DeviceAttributesManager()
+        super.init();
+        migrateDefaults()
         placeManager.delegate = gimbalDelegate
 
-        super.init();
-
         // Hide the BLE power status alert to prevent duplicate alerts
-        if (UserDefaults.standard.value(forKey: hideBlueToothAlertViewKey) == nil) {
-            UserDefaults.standard.set(true, forKey: hideBlueToothAlertViewKey)
+        if (defaults.value(forKey: hideBlueToothAlertViewKey) == nil) {
+            defaults.set(true, forKey: hideBlueToothAlertViewKey)
         }
 
         NotificationCenter.default.addObserver(self,
@@ -172,6 +176,25 @@ fileprivate let shouldTrackRegionEventsKey = "gmbl_should_track_region_events"
         Airship.analytics.associateDeviceIdentifiers(identifiers)
         #endif
     }
+    
+    @objc private func migrateDefaults() {
+        if UserDefaults.standard.object(forKey: hideBlueToothAlertViewKey) != nil {
+            bluetoothPoweredOffAlertEnabled = UserDefaults.standard.bool(forKey: hideBlueToothAlertViewKey)
+            UserDefaults.standard.removeObject(forKey: hideBlueToothAlertViewKey)
+        }
+        if UserDefaults.standard.object(forKey: shouldTrackCustomEntryEventsKey) != nil {
+            shouldTrackCustomEntryEvents = UserDefaults.standard.bool(forKey: shouldTrackCustomEntryEventsKey)
+            UserDefaults.standard.removeObject(forKey:shouldTrackCustomEntryEventsKey)
+        }
+        if UserDefaults.standard.object(forKey: shouldTrackCustomExitEventsKey) != nil {
+            shouldTrackCustomExitEvents = UserDefaults.standard.bool(forKey: shouldTrackCustomExitEventsKey)
+            UserDefaults.standard.removeObject(forKey:shouldTrackCustomExitEventsKey)
+        }
+        if UserDefaults.standard.object(forKey: shouldTrackRegionEventsKey) != nil {
+            shouldTrackRegionEvents = UserDefaults.standard.bool(forKey: shouldTrackRegionEventsKey)
+            UserDefaults.standard.removeObject(forKey:shouldTrackRegionEventsKey)
+        }
+    }
 }
 
 #if !targetEnvironment(simulator)
@@ -180,21 +203,27 @@ private class AirshipGimbalDelegate : NSObject, PlaceManagerDelegate {
     private let keyBoundaryEvent = "boundaryEvent"
     private let customEntryEventName = "gimbal_custom_entry_event"
     private let customExitEventName = "gimbal_custom_exit_event"
+    private let defaults: UserDefaults
     
     private var shouldCreateCustomEntryEvent : Bool {
         get {
-            return UserDefaults.standard.bool(forKey: shouldTrackCustomEntryEventsKey)
+            return defaults.bool(forKey: shouldTrackCustomEntryEventsKey)
         }
     }
     private var shouldCreateCustomExitEvent : Bool {
         get {
-            return UserDefaults.standard.bool(forKey: shouldTrackCustomExitEventsKey)
+            return defaults.bool(forKey: shouldTrackCustomExitEventsKey)
         }
     }
     private var shouldCreateRegionEvents : Bool {
         get {
-            return UserDefaults.standard.bool(forKey: shouldTrackRegionEventsKey)
+            return defaults.bool(forKey: shouldTrackRegionEventsKey)
         }
+    }
+    
+    init(withDefaults defaults: UserDefaults) {
+        self.defaults = defaults
+        super.init()
     }
 
     func placeManager(_ manager: PlaceManager, didBegin visit: Visit) {
