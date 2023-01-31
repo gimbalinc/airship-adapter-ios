@@ -95,6 +95,7 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
         }
     }
     
+    let dumbVariable = 1
     @objc private var defaults: UserDefaults = UserDefaults.standard
     
     #if !targetEnvironment(simulator)
