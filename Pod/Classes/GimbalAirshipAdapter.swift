@@ -100,8 +100,8 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
     #if !targetEnvironment(simulator)
     private override init() {
         placeManager = PlaceManager()
-        defaults = UserDefaults(suiteName: defaultsSuiteName) ?? UserDefaults.standard
-        gimbalDelegate = AirshipGimbalDelegate(withDefaults: defaults)
+//        defaults = UserDefaults(suiteName: defaultsSuiteName) ?? UserDefaults.standard
+//        gimbalDelegate = AirshipGimbalDelegate(withDefaults: defaults)
         deviceAttributesManager = DeviceAttributesManager()
         super.init();
         migrateDefaults()
