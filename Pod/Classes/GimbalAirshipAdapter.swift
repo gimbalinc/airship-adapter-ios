@@ -95,10 +95,10 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
         }
     }
     
-    @objc private let defaults: UserDefaults
+    @objc private var defaults: UserDefaults = UserDefaults.standard
     
     #if !targetEnvironment(simulator)
-    public override init() {
+    private override init() {
         placeManager = PlaceManager()
         defaults = UserDefaults(suiteName: defaultsSuiteName) ?? UserDefaults.standard
         gimbalDelegate = AirshipGimbalDelegate(withDefaults: defaults)
