@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Version 1.1.0 January 31, 2023
 ===============================
 # Fixed:
+- Cocoapods linting issue
+
+Version 1.1.0 January 31, 2023
+===============================
+# Fixed:
 - UserDefaults issue
 
 # Changed:
