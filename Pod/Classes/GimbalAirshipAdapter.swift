@@ -95,7 +95,7 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
         }
     }
     
-    @objc private let defaults: UserDefaults
+    @objc private var defaults: UserDefaults = UserDefaults.standard
     
     #if !targetEnvironment(simulator)
     private override init() {
