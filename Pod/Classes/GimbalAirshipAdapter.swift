@@ -137,7 +137,7 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
             return
         }
 
-        Gimbal.setAPIKey(key, options: nil)
+        Gimbal.setAPIKey(key, options: ["MANAGE_PERMISSIONS" : false])
         Gimbal.start()
         updateDeviceAttributes()
         print("Started Gimbal Adapter. Gimbal application instance identifier: \(Gimbal.applicationInstanceIdentifier() ?? "⚠️ Empty Gimbal application instance identifier")")
