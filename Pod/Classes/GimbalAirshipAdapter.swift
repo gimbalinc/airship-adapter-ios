@@ -11,6 +11,8 @@ fileprivate let hideBlueToothAlertViewKey = "gmbl_hide_bt_power_alert_view"
 fileprivate let shouldTrackCustomEntryEventsKey = "gmbl_should_track_custom_entry"
 fileprivate let shouldTrackCustomExitEventsKey = "gmbl_should_track_custom_exit"
 fileprivate let shouldTrackRegionEventsKey = "gmbl_should_track_region_events"
+fileprivate let wasStartedKey = "gmbl_was_adapter_started_key"
+fileprivate let apiKeyStringKey = "gmbl_api_key_string_key"
 fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
 
 @objc open class AirshipAdapter : NSObject {
@@ -30,6 +32,7 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
     private let placeManager: PlaceManager
     private let gimbalDelegate: AirshipGimbalDelegate
     private let deviceAttributesManager: DeviceAttributesManager
+    private var isAdapterStarted = false
     
     #endif
     
@@ -39,7 +42,7 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
     @objc open var isStarted: Bool {
         get {
             #if !targetEnvironment(simulator)
-            return Gimbal.isStarted()
+            return Gimbal.isStarted() && self.isAdapterStarted
             #else
             return false
             #endif
@@ -111,6 +114,7 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
         if (defaults.value(forKey: hideBlueToothAlertViewKey) == nil) {
             defaults.set(true, forKey: hideBlueToothAlertViewKey)
         }
+        self.restore()
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(AirshipAdapter.updateDeviceAttributes),
@@ -120,10 +124,24 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
     #endif
 
     /**
-     * Restores the adapter. Should be called in didFinishLaunchingWithOptions.
+     * Restores the adapter's running state. If the adapter was previously started, it will restart. Should be called in didFinishLaunchingWithOptions.
      */
     @objc open func restore() {
         updateDeviceAttributes()
+        guard let apiKey = defaults.string(forKey: apiKeyStringKey) else {
+            return
+        }
+        let wasStarted = defaults.bool(forKey: wasStartedKey)
+        
+        if (wasStarted) {
+            print("Restoring Gimbal Adapter")
+            self.start(apiKey)
+            if (self.isStarted) {
+                print("Gimbal adapter restored")
+            } else {
+                print("Failed to restore Gimbal adapter")
+            }
+        }
     }
 
     /**
@@ -136,6 +154,13 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
             print("Unable to start Gimbal Adapter, missing key")
             return
         }
+        if (self.isAdapterStarted) {
+            return
+        }
+        
+        defaults.set(key, forKey: apiKeyStringKey)
+        defaults.set(true, forKey: wasStartedKey)
+        self.isAdapterStarted = true
 
         Gimbal.setAPIKey(key, options: ["MANAGE_PERMISSIONS" : false])
         Gimbal.start()
@@ -150,6 +175,8 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
     @objc open func stop() {
         #if !targetEnvironment(simulator)
         Gimbal.stop()
+        defaults.set(false, forKey: wasStartedKey)
+        self.isAdapterStarted = false
         print("Stopped Gimbal Adapter");
         #endif
     }
