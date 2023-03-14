@@ -114,7 +114,6 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
         if (defaults.value(forKey: hideBlueToothAlertViewKey) == nil) {
             defaults.set(true, forKey: hideBlueToothAlertViewKey)
         }
-        self.restore()
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(AirshipAdapter.updateDeviceAttributes),
