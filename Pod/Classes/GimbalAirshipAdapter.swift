@@ -152,7 +152,8 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
             print("Unable to start Gimbal Adapter, missing key")
             return
         }
-        if (self.isAdapterStarted) {
+        let storedApiKey = defaults.string(forKey: apiKeyStringKey) ?? ""
+        if (self.isAdapterStarted) && (apiKey == storedApiKey) {
             return
         }
         
