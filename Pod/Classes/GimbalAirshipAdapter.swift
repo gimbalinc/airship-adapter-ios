@@ -126,7 +126,6 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
      * Restores the adapter's running state. If the adapter was previously started, it will restart. Should be called in didFinishLaunchingWithOptions.
      */
     @objc open func restore() {
-        updateDeviceAttributes()
         guard let apiKey = defaults.string(forKey: apiKeyStringKey) else {
             return
         }
@@ -153,7 +152,8 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
             print("Unable to start Gimbal Adapter, missing key")
             return
         }
-        if (self.isAdapterStarted) {
+        let storedApiKey = defaults.string(forKey: apiKeyStringKey) ?? ""
+        if (self.isAdapterStarted) && (apiKey == storedApiKey) {
             return
         }
         
@@ -181,6 +181,10 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
     }
 
     @objc private func updateDeviceAttributes() {
+        guard Airship.isFlying else {
+            print("Unable to update device attributes; Airship is not running")
+            return
+        }
         #if !targetEnvironment(simulator)
         var deviceAttributes = Dictionary<AnyHashable, Any>()
 
@@ -279,6 +283,11 @@ private class AirshipGimbalDelegate : NSObject, PlaceManagerDelegate {
     }
     
     private func trackPlaceEventFor(_ visit: Visit, boundaryEvent: UABoundaryEvent) {
+        guard Airship.isFlying else {
+            print("Unable to track event \(boundaryEvent.rawValue) for place with ID \(visit.place.identifier); Airship is not running")
+            return
+            
+        }
         if shouldCreateRegionEvents,
            let regionEvent = RegionEvent(regionID: visit.place.identifier,
                                            source: source,
