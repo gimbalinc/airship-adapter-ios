@@ -2,9 +2,7 @@
 
 import AirshipKit
 
-#if !targetEnvironment(simulator)
 import Gimbal
-#endif
 
 // Keys
 fileprivate let hideBlueToothAlertViewKey = "gmbl_hide_bt_power_alert_view"
@@ -22,8 +20,6 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
      */
     @objc public static let shared = AirshipAdapter()
 
-    #if !targetEnvironment(simulator)
-
     /**
      * Receives forwarded callbacks from the PlaceManagerDelegate
      */
@@ -34,18 +30,12 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
     private let deviceAttributesManager: DeviceAttributesManager
     private var isAdapterStarted = false
     
-    #endif
-    
     /**
      * Returns true if the adapter is started, otherwise false.
      */
     @objc open var isStarted: Bool {
         get {
-            #if !targetEnvironment(simulator)
             return Gimbal.isStarted() && self.isAdapterStarted
-            #else
-            return false
-            #endif
         }
     }
   
@@ -100,7 +90,6 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
     
     @objc private var defaults: UserDefaults = UserDefaults.standard
     
-    #if !targetEnvironment(simulator)
     private override init() {
         placeManager = PlaceManager()
         defaults = UserDefaults(suiteName: defaultsSuiteName) ?? UserDefaults.standard
@@ -120,7 +109,6 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
                                                name: Channel.channelCreatedEvent,
                                                object: nil)
     }
-    #endif
 
     /**
      * Restores the adapter's running state. If the adapter was previously started, it will restart. Should be called in didFinishLaunchingWithOptions.
@@ -147,7 +135,6 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
      * @param apiKey The Gimbal API key.
      */
     @objc open func start(_ apiKey: String?) {
-        #if !targetEnvironment(simulator)
         guard let key = apiKey else {
             print("Unable to start Gimbal Adapter, missing key")
             return
@@ -165,19 +152,16 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
         Gimbal.start()
         updateDeviceAttributes()
         print("Started Gimbal Adapter. Gimbal application instance identifier: \(Gimbal.applicationInstanceIdentifier() ?? "⚠️ Empty Gimbal application instance identifier")")
-        #endif
     }
 
     /**
      * Stops the adapter.
      */
     @objc open func stop() {
-        #if !targetEnvironment(simulator)
         Gimbal.stop()
         defaults.set(false, forKey: wasStartedKey)
         self.isAdapterStarted = false
         print("Stopped Gimbal Adapter");
-        #endif
     }
 
     @objc private func updateDeviceAttributes() {
@@ -185,7 +169,6 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
             print("Unable to update device attributes; Airship is not running")
             return
         }
-        #if !targetEnvironment(simulator)
         var deviceAttributes = Dictionary<AnyHashable, Any>()
 
         if (deviceAttributesManager.getDeviceAttributes().count > 0) {
@@ -204,7 +187,6 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
         let identifiers = Airship.analytics.currentAssociatedDeviceIdentifiers()
         identifiers.set(identifier: Gimbal.applicationInstanceIdentifier(), key: "com.urbanairship.gimbal.aii")
         Airship.analytics.associateDeviceIdentifiers(identifiers)
-        #endif
     }
     
     @objc private func migrateDefaults() {
@@ -227,7 +209,6 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
     }
 }
 
-#if !targetEnvironment(simulator)
 private class AirshipGimbalDelegate : NSObject, PlaceManagerDelegate {
     private let source: String = "Gimbal"
     private let keyBoundaryEvent = "boundaryEvent"
@@ -328,4 +309,3 @@ private class AirshipGimbalDelegate : NSObject, PlaceManagerDelegate {
         event.track()
     }
 }
-#endif
