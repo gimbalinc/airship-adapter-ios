@@ -106,7 +106,7 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(AirshipAdapter.updateDeviceAttributes),
-                                               name: Channel.channelCreatedEvent,
+                                               name: AirshipChannel.channelCreatedEvent,
                                                object: nil)
     }
 
@@ -122,10 +122,12 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
         if (wasStarted) {
             print("Restoring Gimbal Adapter")
             self.start(apiKey)
-            if (self.isStarted) {
-                print("Gimbal adapter restored")
-            } else {
-                print("Failed to restore Gimbal adapter")
+            DispatchQueue.main.async {
+                if (self.isStarted) {
+                    print("Gimbal adapter restored")
+                } else {
+                    print("Failed to restore Gimbal adapter")
+                }
             }
         } else {
             print("Gimbal Airship adapter not previously started, nothing to restore")
@@ -180,18 +182,21 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
             print("Unable to update device attributes; Airship is not running")
             return
         }
-
-        if let namedUserID = Airship.contact.namedUserID {
-            deviceAttributesManager.setDeviceAttribute("ua.nameduser.id", value: namedUserID)
-        }
         
-        if let channelID = Airship.channel.identifier {
-            deviceAttributesManager.setDeviceAttribute("ua.channel.id", value: channelID)
-        }
+        Task {
+            if let namedUserID = await Airship.contact.namedUserID {
+                deviceAttributesManager.setDeviceAttribute("ua.nameduser.id", value: namedUserID)
+            }
+            
+            if let channelID = Airship.channel.identifier {
+                deviceAttributesManager.setDeviceAttribute("ua.channel.id", value: channelID)
+            }
 
-        let identifiers = Airship.analytics.currentAssociatedDeviceIdentifiers()
-        identifiers.set(identifier: Gimbal.applicationInstanceIdentifier(), key: "com.urbanairship.gimbal.aii")
-        Airship.analytics.associateDeviceIdentifiers(identifiers)
+            let identifiers = Airship.analytics.currentAssociatedDeviceIdentifiers()
+            identifiers.set(identifier: Gimbal.applicationInstanceIdentifier(), key: "com.urbanairship.gimbal.aii")
+            Airship.analytics.associateDeviceIdentifiers(identifiers)
+            print("Successfully updated Gimbal Adapter device attributes")
+        }
     }
     
     @objc private func migrateDefaults() {
