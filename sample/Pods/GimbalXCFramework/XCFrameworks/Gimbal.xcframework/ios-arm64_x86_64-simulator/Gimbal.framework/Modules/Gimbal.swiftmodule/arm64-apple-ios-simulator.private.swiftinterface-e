@@ -1,0 +1,39 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Gimbal
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Combine
+import Foundation
+@_exported import Gimbal
+import Swift
+import _Concurrency
+import _StringProcessing
+@objc @_hasMissingDesignatedInitializers public class NetworkService : ObjectiveC.NSObject {
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class PendingStateChange : ObjectiveC.NSObject, Swift.Codable, Foundation.NSSecureCoding {
+  @objc public static var supportsSecureCoding: Swift.Bool
+  @objc public func encode(with coder: Foundation.NSCoder)
+  @objc required public init?(coder: Foundation.NSCoder)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_hasMissingDesignatedInitializers public class PickupLocationServices : ObjectiveC.NSObject {
+  @objc deinit
+}
+@objc public enum PickupState : Swift.Int, Swift.CaseIterable, Swift.Codable {
+  case opened = 0, onTheWay, arrived, awaiting, arrivalConfirmed, cancelled, completed
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [Gimbal.PickupState]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [Gimbal.PickupState] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Gimbal.PickupState : Swift.Equatable {}
+extension Gimbal.PickupState : Swift.Hashable {}
+extension Gimbal.PickupState : Swift.RawRepresentable {}
