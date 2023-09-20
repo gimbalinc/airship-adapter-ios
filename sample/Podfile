@@ -6,6 +6,6 @@ target 'airship-adapter-sample' do
   use_frameworks!
 
   # Pods for airship-adapter-sample
-  pod 'GimbalAirshipAdapter', :path => "../../airship-adapter-ios"
+  pod 'GimbalAirshipAdapter', :path => "../GimbalAirshipAdapter.podspec"
 
 end

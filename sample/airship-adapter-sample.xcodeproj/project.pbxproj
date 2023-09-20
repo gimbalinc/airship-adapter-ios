@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3474321947BDC3AEC968AF57 /* Pods_airship_adapter_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEAF6CD82579AC3567C75ABF /* Pods_airship_adapter_sample.framework */; };
 		A46695C02852B04500F87C16 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46695BF2852B04500F87C16 /* EventsView.swift */; };
 		A46695C22852B0B500F87C16 /* EventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46695C12852B0B500F87C16 /* EventsPresenter.swift */; };
 		A46695C42852B0D600F87C16 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46695C32852B0D600F87C16 /* EventsViewController.swift */; };
@@ -25,7 +24,7 @@
 		A4CF7C8128344CD500DB4ED9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4CF7C7F28344CD500DB4ED9 /* LaunchScreen.storyboard */; };
 		A4CF7C8928359CE300DB4ED9 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4CF7C8828359CE300DB4ED9 /* AirshipConfig.plist */; };
 		A4CF7C8D2835A59400DB4ED9 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CF7C8C2835A59400DB4ED9 /* UIExtensions.swift */; };
-		A4CF9E8728FF51A100596789 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4CF9E8728FF51A100596789 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,7 +34,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A4CF9E8728FF51A100596789 /* (null) in Embed Frameworks */,
+				A4CF9E8728FF51A100596789 /* BuildFile in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,7 +42,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1930A41FA21C8D2507C9B63E /* Pods-airship-adapter-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-airship-adapter-sample.debug.xcconfig"; path = "Target Support Files/Pods-airship-adapter-sample/Pods-airship-adapter-sample.debug.xcconfig"; sourceTree = "<group>"; };
 		A46695BF2852B04500F87C16 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		A46695C12852B0B500F87C16 /* EventsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPresenter.swift; sourceTree = "<group>"; };
 		A46695C32852B0D600F87C16 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -64,8 +62,6 @@
 		A4CF7C8228344CD500DB4ED9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4CF7C8828359CE300DB4ED9 /* AirshipConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AirshipConfig.plist; sourceTree = "<group>"; };
 		A4CF7C8C2835A59400DB4ED9 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
-		B85B888DFEA3A969FCCACAE5 /* Pods-airship-adapter-sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-airship-adapter-sample.release.xcconfig"; path = "Target Support Files/Pods-airship-adapter-sample/Pods-airship-adapter-sample.release.xcconfig"; sourceTree = "<group>"; };
-		DEAF6CD82579AC3567C75ABF /* Pods_airship_adapter_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_airship_adapter_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3474321947BDC3AEC968AF57 /* Pods_airship_adapter_sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,18 +78,8 @@
 		537392D47B05990A58C6038F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1930A41FA21C8D2507C9B63E /* Pods-airship-adapter-sample.debug.xcconfig */,
-				B85B888DFEA3A969FCCACAE5 /* Pods-airship-adapter-sample.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		6B19602380A3189E615BDE6A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DEAF6CD82579AC3567C75ABF /* Pods_airship_adapter_sample.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A46695CB2853E97F00F87C16 /* Events */ = {
@@ -157,7 +142,6 @@
 				A4CF7C7328344CD300DB4ED9 /* airship-adapter-sample */,
 				A4CF7C7228344CD300DB4ED9 /* Products */,
 				537392D47B05990A58C6038F /* Pods */,
-				6B19602380A3189E615BDE6A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,12 +180,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4CF7C8528344CD500DB4ED9 /* Build configuration list for PBXNativeTarget "airship-adapter-sample" */;
 			buildPhases = (
-				F2ABE16FC2A2B605D1BA0694 /* [CP] Check Pods Manifest.lock */,
 				A4CF7C6D28344CD300DB4ED9 /* Sources */,
 				A4CF7C6E28344CD300DB4ED9 /* Frameworks */,
 				A4CF7C6F28344CD300DB4ED9 /* Resources */,
 				A4CF9E8828FF51A100596789 /* Embed Frameworks */,
-				F9F982B4448FEE5ECD53177C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,48 +239,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		F2ABE16FC2A2B605D1BA0694 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-airship-adapter-sample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F9F982B4448FEE5ECD53177C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-airship-adapter-sample/Pods-airship-adapter-sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-airship-adapter-sample/Pods-airship-adapter-sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-airship-adapter-sample/Pods-airship-adapter-sample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A4CF7C6D28344CD300DB4ED9 /* Sources */ = {
@@ -452,7 +392,6 @@
 		};
 		A4CF7C8628344CD500DB4ED9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1930A41FA21C8D2507C9B63E /* Pods-airship-adapter-sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,7 +429,6 @@
 		};
 		A4CF7C8728344CD500DB4ED9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B85B888DFEA3A969FCCACAE5 /* Pods-airship-adapter-sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
