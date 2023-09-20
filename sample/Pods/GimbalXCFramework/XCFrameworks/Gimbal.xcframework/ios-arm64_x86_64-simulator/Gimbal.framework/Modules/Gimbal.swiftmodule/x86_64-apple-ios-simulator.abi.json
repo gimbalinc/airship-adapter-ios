@@ -1,0 +1,2010 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Gimbal",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Gimbal",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "Gimbal",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Gimbal"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkService",
+        "printedName": "NetworkService",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkService",
+                "printedName": "Gimbal.NetworkService",
+                "usr": "c:@M@Gimbal@objc(cs)NetworkService"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@Gimbal@objc(cs)NetworkService(im)init",
+            "mangledName": "$s6Gimbal14NetworkServiceCACycfc",
+            "moduleName": "Gimbal",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@Gimbal@objc(cs)NetworkService",
+        "mangledName": "$s6Gimbal14NetworkServiceC",
+        "moduleName": "Gimbal",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Gimbal",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PendingStateChange",
+        "printedName": "PendingStateChange",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "supportsSecureCoding",
+            "printedName": "supportsSecureCoding",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@Gimbal@objc(cs)PendingStateChange(cpy)supportsSecureCoding",
+            "mangledName": "$s6Gimbal18PendingStateChangeC20supportsSecureCodingSbvpZ",
+            "moduleName": "Gimbal",
+            "static": true,
+            "objc_name": "supportsSecureCoding",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Gimbal@objc(cs)PendingStateChange(cm)supportsSecureCoding",
+                "mangledName": "$s6Gimbal18PendingStateChangeC20supportsSecureCodingSbvgZ",
+                "moduleName": "Gimbal",
+                "static": true,
+                "implicit": true,
+                "objc_name": "supportsSecureCoding",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Gimbal@objc(cs)PendingStateChange(cm)setSupportsSecureCoding:",
+                "mangledName": "$s6Gimbal18PendingStateChangeC20supportsSecureCodingSbvsZ",
+                "moduleName": "Gimbal",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Gimbal18PendingStateChangeC20supportsSecureCodingSbvMZ",
+                "mangledName": "$s6Gimbal18PendingStateChangeC20supportsSecureCodingSbvMZ",
+                "moduleName": "Gimbal",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Gimbal@objc(cs)PendingStateChange(im)encodeWithCoder:",
+            "mangledName": "$s6Gimbal18PendingStateChangeC6encode4withySo7NSCoderC_tF",
+            "moduleName": "Gimbal",
+            "objc_name": "encodeWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Gimbal.PendingStateChange?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PendingStateChange",
+                    "printedName": "Gimbal.PendingStateChange",
+                    "usr": "c:@M@Gimbal@objc(cs)PendingStateChange"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@Gimbal@objc(cs)PendingStateChange(im)initWithCoder:",
+            "mangledName": "$s6Gimbal18PendingStateChangeC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "Gimbal",
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PendingStateChange",
+                "printedName": "Gimbal.PendingStateChange",
+                "usr": "c:@M@Gimbal@objc(cs)PendingStateChange"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@Gimbal@objc(cs)PendingStateChange(im)init",
+            "mangledName": "$s6Gimbal18PendingStateChangeCACycfc",
+            "moduleName": "Gimbal",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PendingStateChange",
+                "printedName": "Gimbal.PendingStateChange",
+                "usr": "c:@M@Gimbal@objc(cs)PendingStateChange"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Gimbal18PendingStateChangeC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s6Gimbal18PendingStateChangeC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "Gimbal",
+            "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Gimbal18PendingStateChangeC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s6Gimbal18PendingStateChangeC6encode2toys7Encoder_p_tKF",
+            "moduleName": "Gimbal",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@Gimbal@objc(cs)PendingStateChange",
+        "mangledName": "$s6Gimbal18PendingStateChangeC",
+        "moduleName": "Gimbal",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Gimbal",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Gimbal",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PickupLocationServices",
+        "printedName": "PickupLocationServices",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PickupLocationServices",
+                "printedName": "Gimbal.PickupLocationServices",
+                "usr": "c:@M@Gimbal@objc(cs)PickupLocationServices"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@Gimbal@objc(cs)PickupLocationServices(im)init",
+            "mangledName": "$s6Gimbal22PickupLocationServicesCACycfc",
+            "moduleName": "Gimbal",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@Gimbal@objc(cs)PickupLocationServices",
+        "mangledName": "$s6Gimbal22PickupLocationServicesC",
+        "moduleName": "Gimbal",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Gimbal",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PickupState",
+        "printedName": "PickupState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "opened",
+            "printedName": "opened",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Gimbal.PickupState.Type) -> Gimbal.PickupState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PickupState",
+                    "printedName": "Gimbal.PickupState",
+                    "usr": "c:@M@Gimbal@E@PickupState"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Gimbal.PickupState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PickupState",
+                        "printedName": "Gimbal.PickupState",
+                        "usr": "c:@M@Gimbal@E@PickupState"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Gimbal@E@PickupState@PickupStateOpened",
+            "mangledName": "$s6Gimbal11PickupStateO6openedyA2CmF",
+            "moduleName": "Gimbal",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "onTheWay",
+            "printedName": "onTheWay",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Gimbal.PickupState.Type) -> Gimbal.PickupState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PickupState",
+                    "printedName": "Gimbal.PickupState",
+                    "usr": "c:@M@Gimbal@E@PickupState"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Gimbal.PickupState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PickupState",
+                        "printedName": "Gimbal.PickupState",
+                        "usr": "c:@M@Gimbal@E@PickupState"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Gimbal@E@PickupState@PickupStateOnTheWay",
+            "mangledName": "$s6Gimbal11PickupStateO8onTheWayyA2CmF",
+            "moduleName": "Gimbal",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "arrived",
+            "printedName": "arrived",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Gimbal.PickupState.Type) -> Gimbal.PickupState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PickupState",
+                    "printedName": "Gimbal.PickupState",
+                    "usr": "c:@M@Gimbal@E@PickupState"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Gimbal.PickupState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PickupState",
+                        "printedName": "Gimbal.PickupState",
+                        "usr": "c:@M@Gimbal@E@PickupState"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Gimbal@E@PickupState@PickupStateArrived",
+            "mangledName": "$s6Gimbal11PickupStateO7arrivedyA2CmF",
+            "moduleName": "Gimbal",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "awaiting",
+            "printedName": "awaiting",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Gimbal.PickupState.Type) -> Gimbal.PickupState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PickupState",
+                    "printedName": "Gimbal.PickupState",
+                    "usr": "c:@M@Gimbal@E@PickupState"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Gimbal.PickupState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PickupState",
+                        "printedName": "Gimbal.PickupState",
+                        "usr": "c:@M@Gimbal@E@PickupState"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Gimbal@E@PickupState@PickupStateAwaiting",
+            "mangledName": "$s6Gimbal11PickupStateO8awaitingyA2CmF",
+            "moduleName": "Gimbal",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "arrivalConfirmed",
+            "printedName": "arrivalConfirmed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Gimbal.PickupState.Type) -> Gimbal.PickupState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PickupState",
+                    "printedName": "Gimbal.PickupState",
+                    "usr": "c:@M@Gimbal@E@PickupState"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Gimbal.PickupState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PickupState",
+                        "printedName": "Gimbal.PickupState",
+                        "usr": "c:@M@Gimbal@E@PickupState"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Gimbal@E@PickupState@PickupStateArrivalConfirmed",
+            "mangledName": "$s6Gimbal11PickupStateO16arrivalConfirmedyA2CmF",
+            "moduleName": "Gimbal",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "cancelled",
+            "printedName": "cancelled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Gimbal.PickupState.Type) -> Gimbal.PickupState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PickupState",
+                    "printedName": "Gimbal.PickupState",
+                    "usr": "c:@M@Gimbal@E@PickupState"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Gimbal.PickupState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PickupState",
+                        "printedName": "Gimbal.PickupState",
+                        "usr": "c:@M@Gimbal@E@PickupState"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Gimbal@E@PickupState@PickupStateCancelled",
+            "mangledName": "$s6Gimbal11PickupStateO9cancelledyA2CmF",
+            "moduleName": "Gimbal",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Var",
+            "name": "completed",
+            "printedName": "completed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Gimbal.PickupState.Type) -> Gimbal.PickupState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PickupState",
+                    "printedName": "Gimbal.PickupState",
+                    "usr": "c:@M@Gimbal@E@PickupState"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Gimbal.PickupState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PickupState",
+                        "printedName": "Gimbal.PickupState",
+                        "usr": "c:@M@Gimbal@E@PickupState"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Gimbal@E@PickupState@PickupStateCompleted",
+            "mangledName": "$s6Gimbal11PickupStateO9completedyA2CmF",
+            "moduleName": "Gimbal",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 6
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Gimbal11PickupStateO8rawValueSivp",
+            "mangledName": "$s6Gimbal11PickupStateO8rawValueSivp",
+            "moduleName": "Gimbal",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Gimbal11PickupStateO8rawValueSivg",
+                "mangledName": "$s6Gimbal11PickupStateO8rawValueSivg",
+                "moduleName": "Gimbal",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Gimbal.PickupState?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PickupState",
+                    "printedName": "Gimbal.PickupState",
+                    "usr": "c:@M@Gimbal@E@PickupState"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Gimbal11PickupStateO8rawValueACSgSi_tcfc",
+            "mangledName": "$s6Gimbal11PickupStateO8rawValueACSgSi_tcfc",
+            "moduleName": "Gimbal",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Gimbal.PickupState]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PickupState",
+                    "printedName": "Gimbal.PickupState",
+                    "usr": "c:@M@Gimbal@E@PickupState"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Gimbal11PickupStateO8allCasesSayACGvpZ",
+            "mangledName": "$s6Gimbal11PickupStateO8allCasesSayACGvpZ",
+            "moduleName": "Gimbal",
+            "static": true,
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Gimbal.PickupState]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PickupState",
+                        "printedName": "Gimbal.PickupState",
+                        "usr": "c:@M@Gimbal@E@PickupState"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Gimbal11PickupStateO8allCasesSayACGvgZ",
+                "mangledName": "$s6Gimbal11PickupStateO8allCasesSayACGvgZ",
+                "moduleName": "Gimbal",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@Gimbal@E@PickupState",
+        "mangledName": "$s6Gimbal11PickupStateO",
+        "moduleName": "Gimbal",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Gimbal.PickupState]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PickupState",
+                        "printedName": "Gimbal.PickupState",
+                        "usr": "c:@M@Gimbal@E@PickupState"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Gimbal",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Gimbal",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Gimbal",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 604,
+      "length": 29,
+      "value": "\"com.gimbal.pickupPlaceQueue\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 671,
+      "length": 29,
+      "value": "\"com.gimbal.pickupPlaceIdKey\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 735,
+      "length": 13,
+      "value": "\"com.gimbal.\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 1308,
+      "length": 45,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 1327,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 1352,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 1898,
+      "length": 33,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 1917,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 1930,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 2456,
+      "length": 33,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 2475,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 2488,
+      "length": 12,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "FloatLiteral",
+      "offset": 497,
+      "length": 5,
+      "value": "5e300"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 723,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 830,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 892,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1021,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1299,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1362,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1677,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1712,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2561,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "FloatLiteral",
+      "offset": 2670,
+      "length": 11,
+      "value": "0.000000001"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2704,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "FloatLiteral",
+      "offset": 2816,
+      "length": 11,
+      "value": "0.000000001"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2850,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2890,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3239,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3254,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3756,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PolygonCalculator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3824,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "Dictionary",
+      "offset": 436,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 556,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1175,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1735,
+      "length": 3,
+      "value": "500"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1840,
+      "length": 3,
+      "value": "400"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 2538,
+      "length": 60,
+      "value": "\"caught error: \""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 2561,
+      "length": 1,
+      "value": "\", about to delay for: \""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 2597,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 3191,
+      "length": 60,
+      "value": "\"caught error: \""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 3214,
+      "length": 1,
+      "value": "\", about to delay for: \""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 3250,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3649,
+      "length": 2,
+      "value": "93"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 4143,
+      "length": 20,
+      "value": "\"Publisher finished\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 4353,
+      "length": 17,
+      "value": "\"Value: \""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 4369,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "Array",
+      "offset": 4487,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 4663,
+      "length": 8,
+      "value": "\"domain\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4679,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 4693,
+      "length": 13,
+      "value": "\"description\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 4708,
+      "length": 21,
+      "value": "\"unable to serialize\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 4885,
+      "length": 47,
+      "value": "\"Failed to load: \""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 4931,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5244,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5276,
+      "length": 3,
+      "value": "243"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5335,
+      "length": 3,
+      "value": "243"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 187,
+      "length": 14,
+      "value": "\"Gimbal.NetworkService\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PendingStateChange.swift",
+      "kind": "BooleanLiteral",
+      "offset": 283,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PendingStateChange.swift",
+      "kind": "StringLiteral",
+      "offset": 650,
+      "length": 11,
+      "value": "\"timestamp\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PendingStateChange.swift",
+      "kind": "StringLiteral",
+      "offset": 719,
+      "length": 13,
+      "value": "\"pickupState\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PendingStateChange.swift",
+      "kind": "StringLiteral",
+      "offset": 841,
+      "length": 11,
+      "value": "\"timestamp\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PendingStateChange.swift",
+      "kind": "StringLiteral",
+      "offset": 931,
+      "length": 13,
+      "value": "\"pickupState\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PendingStateChange.swift",
+      "kind": "StringLiteral",
+      "offset": 175,
+      "length": 18,
+      "value": "\"Gimbal.PendingStateChange\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 1738,
+      "length": 12,
+      "value": "\"identifier\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 1766,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 1810,
+      "length": 16,
+      "value": "\"organizationId\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1839,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 1872,
+      "length": 6,
+      "value": "\"name\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 1894,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 1934,
+      "length": 21,
+      "value": "\"entryDelayInSeconds\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1968,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 2013,
+      "length": 16,
+      "value": "\"geoFenceCircle\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 2096,
+      "length": 17,
+      "value": "\"geoFencePolygon\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 2191,
+      "length": 8,
+      "value": "\"center\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 2282,
+      "length": 10,
+      "value": "\"latitude\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 2334,
+      "length": 11,
+      "value": "\"longitude\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 2531,
+      "length": 8,
+      "value": "\"radius\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 2600,
+      "length": 4,
+      "value": "\"id\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2617,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 2657,
+      "length": 6,
+      "value": "\"uuid\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 2679,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 2733,
+      "length": 11,
+      "value": "\"locations\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 2929,
+      "length": 10,
+      "value": "\"latitude\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 2975,
+      "length": 11,
+      "value": "\"longitude\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlace.swift",
+      "kind": "StringLiteral",
+      "offset": 3331,
+      "length": 12,
+      "value": "\"attributes\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupLocationServices.swift",
+      "kind": "StringLiteral",
+      "offset": 557,
+      "length": 26,
+      "value": "\"GMBLEntryNotificationKey\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupLocationServices.swift",
+      "kind": "FloatLiteral",
+      "offset": 772,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupLocationServices.swift",
+      "kind": "BooleanLiteral",
+      "offset": 819,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupLocationServices.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1414,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupLocationServices.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1612,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupLocationServices.swift",
+      "kind": "StringLiteral",
+      "offset": 183,
+      "length": 22,
+      "value": "\"Gimbal.PickupLocationServices\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupLocationServices.swift",
+      "kind": "Array",
+      "offset": 2207,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupLocationServices.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2830,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupLocationServices.swift",
+      "kind": "StringLiteral",
+      "offset": 3832,
+      "length": 22,
+      "value": "\"GMBLPickupPlaceEntry\""
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 234,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 246,
+      "length": 8,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 265,
+      "length": 7,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 283,
+      "length": 8,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 302,
+      "length": 16,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 329,
+      "length": 9,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 349,
+      "length": 9,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 234,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 246,
+      "length": 8,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 265,
+      "length": 7,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 283,
+      "length": 8,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 302,
+      "length": 16,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 329,
+      "length": 9,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 349,
+      "length": 9,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 538,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 541,
+      "length": 4,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 538,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 541,
+      "length": 4,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 538,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/PickupPlaceEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 541,
+      "length": 4,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/HighAccuracyFixProvider.swift",
+      "kind": "BooleanLiteral",
+      "offset": 746,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/HighAccuracyFixProvider.swift",
+      "kind": "IntegerLiteral",
+      "offset": 829,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/HighAccuracyFixProvider.swift",
+      "kind": "IntegerLiteral",
+      "offset": 901,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/HighAccuracyFixProvider.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1051,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/HighAccuracyFixProvider.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1294,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/HighAccuracyFixProvider.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1450,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/andrewtran\/Desktop\/repos\/ios-sdk\/Gimbal-SDK\/Gimbal-SDK\/HighAccuracyFixProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 403,
+      "length": 23,
+      "value": "\"Gimbal.HighAccuracyFixProvider\""
+    }
+  ]
+}

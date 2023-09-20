@@ -106,7 +106,7 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(AirshipAdapter.updateDeviceAttributes),
-                                               name: Channel.channelCreatedEvent,
+                                               name: AirshipChannel.channelCreatedEvent,
                                                object: nil)
     }
 
@@ -122,11 +122,15 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
         if (wasStarted) {
             print("Restoring Gimbal Adapter")
             self.start(apiKey)
-            if (self.isStarted) {
-                print("Gimbal adapter restored")
-            } else {
-                print("Failed to restore Gimbal adapter")
+            DispatchQueue.main.async {
+                if (self.isStarted) {
+                    print("Gimbal adapter restored")
+                } else {
+                    print("Failed to restore Gimbal adapter")
+                }
             }
+        } else {
+            print("Gimbal Airship adapter not previously started, nothing to restore")
         }
     }
 
@@ -139,10 +143,19 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
             print("Unable to start Gimbal Adapter, missing key")
             return
         }
-        let storedApiKey = defaults.string(forKey: apiKeyStringKey) ?? ""
-        if (self.isAdapterStarted) && (apiKey == storedApiKey) {
+        
+        guard !self.isAdapterStarted else {
+            print("Calling 'start' when adapter is already started has no effect")
             return
         }
+        
+        let storedApiKey = defaults.string(forKey: apiKeyStringKey)
+        
+        guard key != storedApiKey else {
+            return
+        }
+        
+        print("Detected API key change: \(storedApiKey ?? "nil") -> \(key)")
         
         defaults.set(key, forKey: apiKeyStringKey)
         defaults.set(true, forKey: wasStartedKey)
@@ -169,24 +182,21 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
             print("Unable to update device attributes; Airship is not running")
             return
         }
-        var deviceAttributes = Dictionary<AnyHashable, Any>()
-
-        if (deviceAttributesManager.getDeviceAttributes().count > 0) {
-            for (key,val) in deviceAttributesManager.getDeviceAttributes() {
-                deviceAttributes[key] = val
-            }
-        }
         
-        deviceAttributes["ua.nameduser.id"] = Airship.contact.namedUserID
-        deviceAttributes["ua.channel.id"] = Airship.channel.identifier
+        Task {
+            if let namedUserID = await Airship.contact.namedUserID {
+                deviceAttributesManager.setDeviceAttribute("ua.nameduser.id", value: namedUserID)
+            }
+            
+            if let channelID = Airship.channel.identifier {
+                deviceAttributesManager.setDeviceAttribute("ua.channel.id", value: channelID)
+            }
 
-        if (deviceAttributes.count > 0) {
-            deviceAttributesManager.setDeviceAttributes(deviceAttributes)
+            let identifiers = Airship.analytics.currentAssociatedDeviceIdentifiers()
+            identifiers.set(identifier: Gimbal.applicationInstanceIdentifier(), key: "com.urbanairship.gimbal.aii")
+            Airship.analytics.associateDeviceIdentifiers(identifiers)
+            print("Successfully updated Gimbal Adapter device attributes")
         }
-
-        let identifiers = Airship.analytics.currentAssociatedDeviceIdentifiers()
-        identifiers.set(identifier: Gimbal.applicationInstanceIdentifier(), key: "com.urbanairship.gimbal.aii")
-        Airship.analytics.associateDeviceIdentifiers(identifiers)
     }
     
     @objc private func migrateDefaults() {
@@ -238,18 +248,21 @@ private class AirshipGimbalDelegate : NSObject, PlaceManagerDelegate {
     }
 
     func placeManager(_ manager: PlaceManager, didBegin visit: Visit) {
+        print("Entered place: \(visit.place.name) Arrival date: \(visit.arrivalDate)")
         trackPlaceEventFor(visit, boundaryEvent: .enter)
         
         AirshipAdapter.shared.delegate?.placeManager?(manager, didBegin: visit)
     }
 
     func placeManager(_ manager: PlaceManager, didBegin visit: Visit, withDelay delayTime: TimeInterval) {
+        print("Entered place: \(visit.place.name) date: \(visit.arrivalDate) withDelay: \(delayTime)")
         trackPlaceEventFor(visit, boundaryEvent: .enter)
         
         AirshipAdapter.shared.delegate?.placeManager?(manager, didBegin: visit, withDelay: delayTime)
     }
 
     func placeManager(_ manager: PlaceManager, didEnd visit: Visit) {
+        print("Exited place: \(visit.place.name) Arrival date: \(visit.arrivalDate) Exit Date: \(visit.departureDate?.description ?? "n/a")")
         trackPlaceEventFor(visit, boundaryEvent: .exit)
         
         AirshipAdapter.shared.delegate?.placeManager?(manager, didEnd: visit)
@@ -260,6 +273,7 @@ private class AirshipGimbalDelegate : NSObject, PlaceManagerDelegate {
     }
 
     func placeManager(_ manager: PlaceManager, didDetect location: CLLocation) {
+        print("Detected location \(location.coordinate)")
         AirshipAdapter.shared.delegate?.placeManager?(manager, didDetect: location)
     }
     

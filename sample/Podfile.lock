@@ -1,0 +1,44 @@
+PODS:
+  - Airship (17.2.2):
+    - Airship/Automation (= 17.2.2)
+    - Airship/Basement (= 17.2.2)
+    - Airship/Core (= 17.2.2)
+    - Airship/FeatureFlags (= 17.2.2)
+    - Airship/MessageCenter (= 17.2.2)
+    - Airship/PreferenceCenter (= 17.2.2)
+  - Airship/Automation (17.2.2):
+    - Airship/Core
+  - Airship/Basement (17.2.2)
+  - Airship/Core (17.2.2):
+    - Airship/Basement
+  - Airship/FeatureFlags (17.2.2):
+    - Airship/Core
+  - Airship/MessageCenter (17.2.2):
+    - Airship/Core
+  - Airship/PreferenceCenter (17.2.2):
+    - Airship/Core
+  - GimbalAirshipAdapter (2.3.1):
+    - Airship (~> 17.2.2)
+    - GimbalXCFramework (~> 2.93.1)
+  - GimbalXCFramework (2.93.1)
+
+DEPENDENCIES:
+  - GimbalAirshipAdapter (from `../../airship-adapter-ios`)
+
+SPEC REPOS:
+  trunk:
+    - Airship
+    - GimbalXCFramework
+
+EXTERNAL SOURCES:
+  GimbalAirshipAdapter:
+    :path: "../../airship-adapter-ios"
+
+SPEC CHECKSUMS:
+  Airship: f5a106a6daa01ba46ae2f519b1b3d4595e7e0972
+  GimbalAirshipAdapter: a74f2170ca2b975131cc91be3668b99b963b9b78
+  GimbalXCFramework: b7d3fc0006b68095ea20df15524c479f1a0c65fb
+
+PODFILE CHECKSUM: 04e4110df004d6677ac62008e4fdf3ba3ed4fdd2
+
+COCOAPODS: 1.12.1
