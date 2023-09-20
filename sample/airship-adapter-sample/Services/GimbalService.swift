@@ -47,7 +47,6 @@ class GimbalService: NSObject {
 
 extension GimbalService: PlaceManagerDelegate {
     func placeManager(_ manager: PlaceManager, didBegin visit: Visit) {
-        print("Did Enter Place: \(visit.place)")
         self.notifyAndSavePlaceEventWith(
             firstDescriptor: "Enter - \(visit.place.name)",
             secondDescriptor: Date().toFormattedLocalString()
@@ -64,15 +63,10 @@ extension GimbalService: PlaceManagerDelegate {
     }
     
     func placeManager(_ manager: PlaceManager, didEnd visit: Visit) {
-        print("Did Exit Place: \(visit.place)")
         self.notifyAndSavePlaceEventWith(
             firstDescriptor: "Exit - \(visit.place.name)",
             secondDescriptor: Date().toFormattedLocalString()
         )
-    }
-    
-    func placeManager(_ manager: PlaceManager, didReceive sighting: BeaconSighting, forVisits visits: [Any]) {
-        print("Beacon Sighting: \(sighting), For Visits: \(visits)")
     }
     
     private func notifyAndSavePlaceEventWith(firstDescriptor: String, secondDescriptor: String) {
