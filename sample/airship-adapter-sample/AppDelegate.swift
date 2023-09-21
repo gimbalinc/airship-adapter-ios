@@ -9,6 +9,7 @@ import UIKit
 import GimbalAirshipAdapter
 import AirshipKit
 import CoreLocation
+import Gimbal
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
@@ -34,6 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         AirshipAdapter.shared.shouldTrackRegionEvents = true
         AirshipAdapter.shared.start("YOUR_GIMBAL_API_KEY")
         AirshipAdapter.shared.restore()
+        
+        // Uncomment the following lines for more detailed logging
+//        Debugger.enableDebugLogging()
+//        Debugger.enableBeaconSightingsLogging()
+//        Debugger.enablePlaceLogging()
         
         print("My Application Channel ID: \(String(describing: Airship.channel.identifier))")
             

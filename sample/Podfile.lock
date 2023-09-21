@@ -23,7 +23,7 @@ PODS:
   - GimbalXCFramework (2.93.1)
 
 DEPENDENCIES:
-  - GimbalAirshipAdapter (from `../../airship-adapter-ios`)
+  - GimbalAirshipAdapter (from `../GimbalAirshipAdapter.podspec`)
 
 SPEC REPOS:
   trunk:
@@ -32,13 +32,13 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   GimbalAirshipAdapter:
-    :path: "../../airship-adapter-ios"
+    :path: "../GimbalAirshipAdapter.podspec"
 
 SPEC CHECKSUMS:
   Airship: f5a106a6daa01ba46ae2f519b1b3d4595e7e0972
   GimbalAirshipAdapter: a74f2170ca2b975131cc91be3668b99b963b9b78
   GimbalXCFramework: b7d3fc0006b68095ea20df15524c479f1a0c65fb
 
-PODFILE CHECKSUM: 04e4110df004d6677ac62008e4fdf3ba3ed4fdd2
+PODFILE CHECKSUM: 4c700f9da64de2990c1fa3507d88eb63b569052d
 
 COCOAPODS: 1.12.1

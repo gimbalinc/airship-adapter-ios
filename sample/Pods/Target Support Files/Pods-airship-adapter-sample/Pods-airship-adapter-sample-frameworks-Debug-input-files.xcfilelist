@@ -1,4 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-airship-adapter-sample/Pods-airship-adapter-sample-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Airship/AirshipKit.framework
-${BUILT_PRODUCTS_DIR}/GimbalAirshipAdapter/GimbalAirshipAdapter.framework
-${PODS_XCFRAMEWORKS_BUILD_DIR}/GimbalXCFramework/Gimbal.framework/Gimbal
