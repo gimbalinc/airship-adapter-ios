@@ -11,6 +11,7 @@ fileprivate let shouldTrackCustomExitEventsKey = "gmbl_should_track_custom_exit"
 fileprivate let shouldTrackRegionEventsKey = "gmbl_should_track_region_events"
 fileprivate let wasStartedKey = "gmbl_was_adapter_started_key"
 fileprivate let apiKeyStringKey = "gmbl_api_key_string_key"
+fileprivate let userAnalyticsIdKey = "gmbl_user_analytics_id_key"
 fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
 
 @objc open class AirshipAdapter : NSObject {
@@ -175,6 +176,10 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
         defaults.set(false, forKey: wasStartedKey)
         self.isAdapterStarted = false
         print("Stopped Gimbal Adapter");
+    }
+    
+    @objc open func set(userAnalyticsId: String) {
+        AnalyticsManager.sharedInstance().setUserAnalyticsID(userAnalyticsId)
     }
 
     @objc private func updateDeviceAttributes() {
