@@ -132,6 +132,12 @@ AirshipGimbalAdapter.shared.bluetoothPoweredOffAlertEnabled = true
 [AirshpGimbalAdapter shared].bluetoothPoweredOffAlertEnabled = YES;
 ```
 
+### Setting Analytics Id
+
+```
+AirshipAdapter.shared.set(userAnalyticsId: "YOUR_ANALYTICS_ID")
+```
+
 ## AirshipGimbalAdapter Migration
 
 The `AirshipGimbalAdapter` is an older version of this adapter; if you previously used the `AirshipGimblAdapter` and would like to migrate, see the following steps:

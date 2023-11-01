@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         AirshipAdapter.shared.shouldTrackCustomEntryEvents = true
         AirshipAdapter.shared.shouldTrackCustomExitEvents = false
         AirshipAdapter.shared.shouldTrackRegionEvents = true
+//        AirshipAdapter.shared.set(userAnalyticsId: "YOUR_ANALYTICS_ID")
         AirshipAdapter.shared.start("YOUR_GIMBAL_API_KEY")
         AirshipAdapter.shared.restore()
         

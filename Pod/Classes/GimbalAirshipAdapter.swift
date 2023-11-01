@@ -176,6 +176,10 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
         self.isAdapterStarted = false
         print("Stopped Gimbal Adapter");
     }
+    
+    @objc open func set(userAnalyticsId: String) {
+        AnalyticsManager.sharedInstance().setUserAnalyticsID(userAnalyticsId)
+    }
 
     @objc private func updateDeviceAttributes() {
         guard Airship.isFlying else {
