@@ -106,7 +106,7 @@ fileprivate let defaultsSuiteName = "arshp_gmbl_def_suite"
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(AirshipAdapter.updateDeviceAttributes),
-                                               name: AirshipChannel.channelCreatedEvent,
+                                               name: AirshipNotifications.ChannelCreated.name,
                                                object: nil)
         
         self.isAdapterStarted = defaults.bool(forKey: wasStartedKey)
@@ -293,7 +293,7 @@ private class AirshipGimbalDelegate : NSObject, PlaceManagerDelegate {
            let regionEvent = RegionEvent(regionID: visit.place.identifier,
                                            source: source,
                                     boundaryEvent: boundaryEvent) {
-            Airship.analytics.addEvent(regionEvent)
+            Airship.analytics.recordRegionEvent(regionEvent)
         }
 
         if boundaryEvent == .enter, shouldCreateCustomEntryEvent {
