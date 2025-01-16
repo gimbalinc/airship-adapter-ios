@@ -1,26 +1,26 @@
 PODS:
-  - Airship (17.3.1):
-    - Airship/Automation (= 17.3.1)
-    - Airship/Basement (= 17.3.1)
-    - Airship/Core (= 17.3.1)
-    - Airship/FeatureFlags (= 17.3.1)
-    - Airship/MessageCenter (= 17.3.1)
-    - Airship/PreferenceCenter (= 17.3.1)
-  - Airship/Automation (17.3.1):
+  - Airship (18.13.0):
+    - Airship/Automation (= 18.13.0)
+    - Airship/Basement (= 18.13.0)
+    - Airship/Core (= 18.13.0)
+    - Airship/FeatureFlags (= 18.13.0)
+    - Airship/MessageCenter (= 18.13.0)
+    - Airship/PreferenceCenter (= 18.13.0)
+  - Airship/Automation (18.13.0):
     - Airship/Core
-  - Airship/Basement (17.3.1)
-  - Airship/Core (17.3.1):
+  - Airship/Basement (18.13.0)
+  - Airship/Core (18.13.0):
     - Airship/Basement
-  - Airship/FeatureFlags (17.3.1):
+  - Airship/FeatureFlags (18.13.0):
     - Airship/Core
-  - Airship/MessageCenter (17.3.1):
+  - Airship/MessageCenter (18.13.0):
     - Airship/Core
-  - Airship/PreferenceCenter (17.3.1):
+  - Airship/PreferenceCenter (18.13.0):
     - Airship/Core
-  - GimbalAirshipAdapter (3.1.0):
-    - Airship (~> 17.3.1)
-    - GimbalXCFramework (~> 2.93.1)
-  - GimbalXCFramework (2.93.1)
+  - GimbalAirshipAdapter (4.1.0):
+    - Airship (~> 18.13.0)
+    - GimbalXCFramework (~> 2.94.0)
+  - GimbalXCFramework (2.94.0)
 
 DEPENDENCIES:
   - GimbalAirshipAdapter (from `../GimbalAirshipAdapter.podspec`)
@@ -35,10 +35,10 @@ EXTERNAL SOURCES:
     :path: "../GimbalAirshipAdapter.podspec"
 
 SPEC CHECKSUMS:
-  Airship: a8ec7140cca677696f10f605749c18248d818117
-  GimbalAirshipAdapter: 59efd0754be8c9449d1c7bf550b1179b3b35bb41
-  GimbalXCFramework: b7d3fc0006b68095ea20df15524c479f1a0c65fb
+  Airship: bfe90d95c2b2bd0ea9ed5248a1337f124fe8abfe
+  GimbalAirshipAdapter: e353e13c641c38b7465575370e1da1f456114054
+  GimbalXCFramework: 8e0d3f29ccd1146f29e441ee3b45396026b4176a
 
 PODFILE CHECKSUM: 4c700f9da64de2990c1fa3507d88eb63b569052d
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.16.2
