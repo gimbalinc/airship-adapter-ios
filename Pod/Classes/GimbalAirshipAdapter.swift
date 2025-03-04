@@ -283,7 +283,7 @@ private class AirshipGimbalDelegate : NSObject, PlaceManagerDelegate {
         AirshipAdapter.shared.delegate?.placeManager?(manager, didDetect: location)
     }
     
-    private func trackPlaceEventFor(_ visit: Visit, boundaryEvent: UABoundaryEvent) {
+    private func trackPlaceEventFor(_ visit: Visit, boundaryEvent: AirshipBoundaryEvent) {
         guard Airship.isFlying else {
             print("Unable to track event \(boundaryEvent.rawValue) for place with ID \(visit.place.identifier); Airship is not running")
             return
@@ -305,7 +305,7 @@ private class AirshipGimbalDelegate : NSObject, PlaceManagerDelegate {
     
     private func createAndTrackEvent(withName eventName: String,
                                      forVisit visit: Visit,
-                                     boundaryEvent: UABoundaryEvent) {
+                                     boundaryEvent: AirshipBoundaryEvent) {
         // create event properties
         var visitProperties:[String : Any] = [:]
         visitProperties["visitID"] = visit.visitID
@@ -324,8 +324,13 @@ private class AirshipGimbalDelegate : NSObject, PlaceManagerDelegate {
             visitProperties["dwellTimeInSeconds"] = visit.dwellTime
         }
         
-        let event = CustomEvent(name: eventName)
-        event.properties = visitProperties
-        event.track()
+        do {
+            var event = CustomEvent(name: eventName)
+            try event.setProperties(visitProperties)
+            event.track()
+            
+        } catch {
+            print(error)
+        }
     }
 }
