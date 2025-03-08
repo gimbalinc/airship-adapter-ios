@@ -26,8 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         let locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
-        
-        Airship.takeOff(launchOptions: launchOptions)
+        do {
+            let config = try AirshipConfig.default()
+            try Airship.takeOff(config, launchOptions: launchOptions)
+        } catch {
+            print("Airship.takeOff failed: \(error)")
+        }
+        //Airship.takeOff(launchOptions: launchOptions)
         Airship.push.userPushNotificationsEnabled = true
         Airship.push.defaultPresentationOptions = [.badge, .sound, .list, .banner]
         AirshipAdapter.shared.shouldTrackCustomEntryEvents = true
