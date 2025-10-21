@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   s.requires_arc            = true
   s.dependency                "GimbalXCFramework", "~> 2.94.0"
   s.dependency                "Airship", "~> 19.11.1"
+
   s.pod_target_xcconfig = {
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386'
   }
