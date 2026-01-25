@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a ChangeLog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+[5.0.1] January 25, 2026
+===============================
+# Changed
+- Airship dependency version from 19.11.1 -> 20.1.1
+- GimbalXCFramework version from 2.96.0 -> 2.94.0
+
 [5.0.0] January 18, 2026
 ===============================
 # Changed
